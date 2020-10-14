@@ -82,7 +82,7 @@ router.delete('/homeworks/:id', async (req, res) => {
 //@desc Delete all homework
 //@route DELETE /api/homeworks/
 /*router.delete('/homeworks/', async (req, res) => {
-    const homeworks = await Homework.deleteMany({})
+    await Homework.deleteMany({})
 
     if(homeworks) {
         res.json({ message: 'All data removed' })
@@ -95,7 +95,7 @@ router.delete('/homeworks/', async (req, res) => {
     const homeworks = await Homework.find({})
 
     if(homeworks.length !== 0) {
-        const hapus = await Homework.deleteMany({})
+        await Homework.deleteMany({})
         res.json({ message: 'All data removed' })
     } else {
         res.status(404).json({ message: 'Homework is empty!' })
