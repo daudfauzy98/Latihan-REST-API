@@ -18,14 +18,6 @@ mongoose.connect(process.env.MONGODB_URI,
     console.log('Connect to failed ' + err)
 })
 
-/*mongoose.connect('mongodb+srv://admin:admin@rest-api.p3kvu.mongodb.net/jadwalin?retryWrites=true&w=majority',
-{
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-}, () => {
-    console.log('Connect to MongoDB database success!')
-})*/
-
 // Middlewares
 app.use(express.json())
 app.use(morgan('dev'))
